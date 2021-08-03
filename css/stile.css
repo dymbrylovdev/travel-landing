@@ -270,7 +270,7 @@ header {
 
 }
 .cards__item__link::after{
-    content: url("/img/svg/Shape.svg");
+    content: url("img/svg/Shape.svg");
     position: absolute;
     top: 0;
     left: 138px;
