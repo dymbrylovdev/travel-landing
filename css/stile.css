@@ -1,0 +1,287 @@
+@import "reset.css";
+
+/* lato-regular - latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+    url('../fonts/lato-v17-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/lato-v17-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* lato-700 - latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+    url('../fonts/lato-v17-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/lato-v17-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* lato-900 - latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: local(''),
+    url('../fonts/lato-v17-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/lato-v17-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+html {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: black;
+    line-height: 1.2;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+
+/*Header style start*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 56px;
+
+}
+
+.wrapper {
+    max-width: 1060px;
+    margin: 0 auto;
+}
+
+.header__wrapper__conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+.header__wrapper__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list__item {
+    margin: 0 0 0 82px;
+}
+
+.list__item:first-child {
+    margin: 0;
+}
+
+.list__item__link {
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    color: white;
+}
+
+.list__item__link:hover, list__item__link:active, list__item__link:focus {
+    opacity: 0.75;
+    transition: 0.5s;
+
+}
+
+/*Header style start*/
+
+
+/*Main style start*/
+/*Main__introduction style start*/
+
+
+.main__introduction {
+    min-height: 100vh;
+    background: url("/img/fone_header.png") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 263px;
+    padding-bottom: 155px;
+
+}
+
+.h1 {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 60px;
+    color: white;
+    max-width: 620px;
+    margin-bottom: 22px;
+}
+
+
+.introduction__text {
+    color: white;
+    max-width: 546px;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 54px;
+}
+
+.introduction__input {
+    margin-bottom: 60px;
+}
+
+
+.introduction__button__item {
+
+    width: 171px;
+    left: 906px;
+    top: 9.27%;
+    bottom: 89.71%;
+    background: #1B7DFF;
+    height: 58px;
+}
+
+
+.introduction__button__item a {
+    color: white;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    text-decoration: none;
+}
+
+.person__form__fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center
+}
+
+.form__fieldset__input {
+    background: transparent url("/img/svg/Oval.svg") no-repeat left top;
+    width: 297px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    padding-left: 46px;
+    padding-bottom: 22px;
+    margin-right: 60px;
+    border: 0;
+    border-bottom: 2px solid #BFC0C5;
+
+}
+
+.form__fieldset__input::placeholder {
+    color: white;
+}
+
+.form__fieldset__submit {
+    text-transform: uppercase;
+    padding: 15px 40px;
+    background: #1057bb;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: white;
+    border: 0;
+
+}
+
+.form__fieldset__submit:hover, .form__fieldset__submit:focus, .form__fieldset__submit:active {
+    background-color: #043b86;
+}
+.person__form{
+    margin-bottom:377px ;
+}
+
+/*Main__introduction style end*/
+
+
+/*benefits_section style start*/
+.benefits__section{
+    margin-bottom: 131px;
+}
+
+
+.benefits__section__wrap {
+    max-width: 1262px;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+
+}
+
+.benefits__section__h2 {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 42px;
+    color: #102746;
+    background-color: white;
+    padding: 93px 100px 88px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    width: 100%;
+    border: 0;
+}
+.cards__item{
+
+}
+.benefits__section__cards{
+    display: grid;
+    grid-template: 1fr /1fr 1fr 1fr ;
+    grid-gap:55px ;
+    padding: 32px 100px 111px;
+}
+.cards__item.item_1{
+    max-width: 317px;
+    flex-direction: column;
+    max-height: 288px;
+}
+.cards__item img{
+    margin-bottom: 37px;
+}
+.cards__item__title{
+    margin-bottom: 26px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+
+}
+.cards__item__support{
+    margin-bottom: 39px;
+    font-size: 16px;
+    line-height: 24px;
+    height: 42px;
+
+}
+.cards__item__link{
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+    color: #006DFE;
+    position: relative;
+
+}
+.cards__item__link::after{
+    content: url("/img/svg/Shape.svg");
+    position: absolute;
+    top: 0;
+    left: 138px;
+}
+
+
+
+
+/*benefits_section style end*/
+
+
+/*Main style end*/
+
+
