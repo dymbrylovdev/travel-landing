@@ -50,7 +50,6 @@ body {
     font-size: 35px;
     line-height: 42px;
     position: relative;
-
 }
 
 .section__wrap {
@@ -77,7 +76,15 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    margin-top: 56px;
+    z-index: 999;
+    padding: 10px 0;
+    transition: 0.5s;
+
+
+}
+
+.header {
+    background-color: #0E1D28;
 
 }
 
@@ -91,6 +98,7 @@ header {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    margin-top: 40px;
 
 }
 
@@ -212,6 +220,7 @@ header {
     line-height: 29px;
     color: white;
     border: 0;
+    transition: 0.5s all;
 
 }
 
@@ -435,7 +444,7 @@ header {
 
 /*neighborhood style start*/
 
-.neighborhood__top__section{
+.neighborhood__top__section {
     margin-bottom: 77px;
     display: grid;
     grid-template-columns: minmax(597px, auto) minmax(519px, auto);
@@ -443,41 +452,50 @@ header {
     align-items: center
 
 }
-.top__section-img{
+
+.top__section-img {
     width: 100%;
     margin-right: 108px;
     overflow: hidden;
 
 }
-.top__section-img:hover .neighborhood__img__item-1{
+
+.top__section-img:hover .neighborhood__img__item-1 {
     transform: scale(1.1);
 
 }
-.bottom__section-img:hover .neighborhood__img__item-1{
+
+.bottom__section-img:hover .neighborhood__img__item-1 {
     transform: scale(1.1);
 
 }
-.neighborhood__img__item-1{
+
+.neighborhood__img__item-1 {
     width: 100%;
     transition: 0.5s all;
     object-fit: cover;
 
 }
-.top__section-prefecture{}
-.top__section-prefecture-title{
+
+.top__section-prefecture {
+}
+
+.top__section-prefecture-title {
     font-weight: 500;
     font-size: 30px;
     line-height: 40px;
     margin-bottom: 85px;
 }
-.top__section-prefecture-text{
+
+.top__section-prefecture-text {
     font-size: 16px;
     line-height: 24px;
     color: #102746;
     margin-bottom: 58px;
     padding-right: 30px;
 }
-.top__section-prefecture-link{
+
+.top__section-prefecture-link {
     font-size: 16px;
     line-height: 24px;
     color: #006DFE;
@@ -487,39 +505,42 @@ header {
     background: url("img/svg/Shape.svg") no-repeat 95% center;
 
 }
-.top__section-prefecture-link:hover, .top__section-prefecture-link:focus{
+
+.top__section-prefecture-link:hover, .top__section-prefecture-link:focus {
     background: url("img/svg/Shape.svg") no-repeat right center;
 }
 
 
-
-
-.neighborhood__bottom-section{
-    margin-bottom: 77px;
+.neighborhood__bottom-section {
+    margin-bottom: 140px;
     display: grid;
     grid-template-columns: minmax(519px, auto) minmax(597px, auto);
     grid-gap: 108px;
     align-items: center
 }
-.bottom__section-prefecture{
+
+.bottom__section-prefecture {
     padding-left: 47px;
 
 }
-.bottom__section-prefecture-title{
+
+.bottom__section-prefecture-title {
     padding-right: 100px;
     font-weight: 500;
     font-size: 30px;
     line-height: 40px;
     margin-bottom: 85px;
 }
-.bottom__section-prefecture-text{
+
+.bottom__section-prefecture-text {
     font-size: 16px;
     line-height: 24px;
     color: #102746;
     margin-bottom: 58px;
 
 }
-.bottom__section-prefecture-link{
+
+.bottom__section-prefecture-link {
     font-size: 16px;
     line-height: 24px;
     color: #006DFE;
@@ -529,37 +550,193 @@ header {
     background: url("img/svg/Shape.svg") no-repeat 95% center;
 
 }
-.bottom__section-prefecture-link:hover, .bottom__section-prefecture-link:focus{
+
+.bottom__section-prefecture-link:hover, .bottom__section-prefecture-link:focus {
     background: url("img/svg/Shape.svg") no-repeat right center;
 }
-.bottom__section-img{
+
+.bottom__section-img {
     overflow: hidden;
     max-width: 597px;
 }
 
-
-
-
-
-
-
 /*neighborhood style end*/
 
 
+/*places style start*/
 
 
+.places {
+    margin-bottom: 144px;
+}
+
+.places_title {
+    margin-bottom: 64px;
+}
+
+.section__wrap__card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 60px;
+
+}
+
+.card__item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+
+.card__item_photo {
+    margin-bottom: 45px;
+    position: relative;
+
+}
+
+.card__item_photo-img {
+    max-width: 100%;
+    object-fit: cover;
+
+}
+
+.img_overlay {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(21, 24, 36, 0.6);
+    padding: 15px 25px;
+}
+
+.img_overlay-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-right: auto;
+}
+
+.img_overlay-like {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-right: 14px;
+}
+
+.img_overlay-like::after {
+    content: url("img/svg/places-like.svg");
+
+}
+
+.img_overlay-coments {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.img_overlay-coments::after {
+    content: url("img/svg/places-coments.svg");
+}
 
 
+.card__item_text {
+    padding-right: 20px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #102746;
+    margin-bottom: auto;
+}
+
+.card__item_link {
+    text-transform: uppercase;
+    padding: 12px 19px;
+    background: #1057bb;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: white;
+    border: 0;
+    transition: 0.5s all;
+    text-decoration: none;
+    width: 118px;
+    margin-top: 43px;
+}
+
+.card__item_link:hover, .card__item_link:active, .card__item_link:focus {
+    background-color: #043b86;
+}
+
+/*places style end*/
 
 
+/*block__video style start*/
+.wrap {
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+}
 
+.block__video-item {
+    padding-top: 56.25%;
+}
 
+.wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
+/*block__video style end*/
 
+/*footer start*/
 
+.footer {
+    background-color: #0E1D28;
+    padding: 119px 0;
+}
 
+.footer__wrap {
+    max-width: 1079px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
+}
 
+.footer__list_items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__list__item {
+
+}
+
+.footer__list__item .footer__item__title {
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.footer__item_link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+}
+.footer__item_link:hover, .footer__item_link:focus, .footer__item_link:active{
+    opacity: .65;
+}
+/*footer end*/
 
 
 /*Main style end*/
